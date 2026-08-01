@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #FFF9FA;
+    color: #4A3B3E;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  button, input, select, textarea, .font-sans, p, span, label, nav, a {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Warm Organic Custom Utility Classes */
+.bg-warm-bg {
+  background-color: #FFF9FA;
+}
+
+.bg-warm-soft {
+  background-color: #FFE4E9;
+}
+
+.bg-warm-dark {
+  background-color: #2D2426;
+}
+
+.text-warm-main {
+  color: #4A3B3E;
+}
+
+.text-warm-pink {
+  color: #DB2777;
+}
+
+.text-warm-muted {
+  color: #8C7A7D;
+}
+
+.border-warm-soft {
+  border-color: #FDE2E8;
+}
+
+/* Custom Glassmorphism for Organic Theme */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #FDE2E8;
+  box-shadow: 0 10px 30px -10px rgba(219, 39, 119, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  background: #FFFFFF;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(219, 39, 119, 0.15);
+  border-color: #FBCFE8;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid #FDE2E8;
+}
+
+/* Glow effects */
+.rose-glow {
+  box-shadow: 0 0 30px rgba(219, 39, 119, 0.2);
+}
+
+.pink-glow {
+  box-shadow: 0 0 30px rgba(251, 207, 232, 0.4);
+}
+
+/* Custom organic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FBCFE8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DB2777;
+}
+
+/* Envelope opening styles */
+.envelope-wrapper {
+  perspective: 1000px;
+}
+
+.envelope-flap {
+  transform-origin: top center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.envelope-wrapper.open .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+/* Floating animation */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
